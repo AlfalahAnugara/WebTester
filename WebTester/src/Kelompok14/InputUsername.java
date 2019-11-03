@@ -15,8 +15,7 @@ public class InputUsername {
 		driver.manage().window().maximize();
 		
 		WebElement username=driver.findElement(By.name("username")) ;
-		WebElement password=driver.findElement(By.name("password")) ;
-		username.sendKeys("newcadel"); password.sendKeys("password") ;
+		username.sendKeys("newcadel");
 		String at = driver.getTitle() ;
 		String et = "gmail" ;
 		driver.close() ;
