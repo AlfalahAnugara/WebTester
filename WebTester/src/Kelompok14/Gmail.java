@@ -16,6 +16,12 @@ public class Gmail {
 		driver.findElement(By.className("CwaK9")).click() ;
 		String at = driver.getTitle() ;
 		String et = "gmail" ;
+		driver.close() ;
+		if(at.equalsIgnoreCase(et)) {
+			System.out.println("Test Berhasil") ;
+		} else {
+			System.out.println("Test Gagal") ;
+		}
 
 	}
 
