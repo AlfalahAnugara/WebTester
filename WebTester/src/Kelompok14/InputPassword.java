@@ -12,18 +12,21 @@ public class InputPassword {
 		WebDriver driver = new ChromeDriver() ;
 		driver.get("https://store.steampowered.com/login/") ;
 		driver.manage().window().maximize();
-		
-		WebElement password=driver.findElement(By.name("password")) ;
+		WebElement username=driver.findElement(By.name("username")) ;
+		username.sendKeys("newcadel");
+		WebElement password=driver.findElement(By.id("input_password")) ;
 		password.sendKeys("password") ;
+		WebElement loginbtn=driver.findElement(By.id("login_btn_signin"));
+		loginbtn.click();
 		String at = driver.getTitle() ;
-		String et = "gmail" ;
-		driver.close() ;
+		String et = "steam" ;
+	
 		if(at.equalsIgnoreCase(et)) {
 			System.out.println("Test Berhasil") ;
 		} else {
 			System.out.println("Test Gagal") ;
 		}
-		
+		driver.close() ;
 		
 	}
 	
